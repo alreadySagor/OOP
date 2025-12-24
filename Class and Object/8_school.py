@@ -16,6 +16,9 @@ class Teacher:
     def __repr__(self) -> str:
         return f'Teacher name: {self.name}, subject : {self.subject}, id : {self.id}'
 
+# এখানে ২ টা ক্লাস এর মধ্যেই যেই __repr__ মেথড ব্যবহার করা হয়েছে এটা ক্লাস অবজেক্ট এর স্ট্রিং রিপ্রেজেন্টেশন দিবে 
+# অর্থাৎ আমরা যদি Teacher ক্লাস এর অবজেক্ট এর প্রিন্ট করি তাহলে এটা এই মেথড এর মধ্যে যেই স্ট্রিংটা রিটার্ন করা
+# হচ্ছে সেই অনুযায়ী আউটপুট প্রিন্ট করবে 
 
 class School:
     def __init__(self, name):
@@ -46,6 +49,7 @@ class School:
         for student in self.students:
             print(student)
         return 'All done for now'
+    
 # alia = Student('Alia', 9, 1)
 # ranbir = Teacher('Ranbir', 'Romance', 420)
 # print(alia)
@@ -57,7 +61,7 @@ phitron.enroll('rani', 8000)
 phitron.enroll('vaijaan', 90000)
 
 phitron.add_teacher('Tom Cruise', 'DS')
-phitron.add_teacher('Thor', 'Algorithm')
-phitron.add_teacher('Tony Stark', 'Database')
+phitron.add_teacher('Chris Hemsworth', 'Algorithm')
+phitron.add_teacher('Robert Downey Jr', 'Database')
 
 print(phitron)
