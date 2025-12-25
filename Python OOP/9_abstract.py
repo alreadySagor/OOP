@@ -35,7 +35,7 @@ kore ekta method e implement korte hobe (inforce korbo). To sei inforce korar jo
 python e emon ekta jinish ache seta hocche [from abc import ABC, abstractmethod (abc --> abstract base class)]
 eta niye nilam, ekhon amra bolbo je tomar jei Animal ta ache eita ke Inherite korbo kotha theke? ABC theke
 "class Animal(ABC):| tarpor eat er aage (eitake decorator bole, amra aste dheere janbo) eita diye dibo
-@abstractmethod | ekhon taile ki obostha hoy run korle dekha jay monkey take eat soho make korte partechena
+@abstractmethod | ekhon tahole ki obostha hoy run korle dekha jay monkey take eat soho make korte partechena
                 | karon ki? karon eat asole Monkey class er moddhe nai. karon @abstractmethod bolteche
                 (inforce all derived class to have a eat method) tar maane sob gula child class jara eitake inherite korbe(Animal ke) tader 
                 sobar eat method ta thaktei hobe (@abstractmethod er niche jei method thakbe seitakei inforce korbe)

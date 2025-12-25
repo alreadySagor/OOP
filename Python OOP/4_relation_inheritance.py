@@ -6,7 +6,7 @@ class Gadget:
         self.origin = origin
 
     def run(self):
-        return f'Runnig laptop: {self.brand}'
+        return f'Runnig Device: {self.brand}'
     
 class Laptop:
     def __init__(self, memory, ssd):
@@ -42,5 +42,5 @@ my_phone = Phone('iphone', 120000, 'silver', 'china', True) # mone kori dual sim
 print(my_phone.brand)
 print(my_phone)
 # ekhane sudhu true pabo baki properties gula pacchi na
-# baki properties gula paite gele amader ke "Gadget & Phone" er moddhe
+# baki properties gula pete gele amader ke "Gadget & Phone" er moddhe
 # relation make korte hobe

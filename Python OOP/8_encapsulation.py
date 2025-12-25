@@ -7,7 +7,7 @@ class Bank:
         # Protected
         self._branch = 'Banani 11' #  1 ta _ deya mane kono kichu protect kore na, kintu etake protected variable hisebe lokjon treat korar chesta kore (etar kono rule nai). Etake outside thekeu access korte parbo
         # Private
-        self.__balance = initial_deposit # Balance taake private korlam
+        self.__balance = initial_deposit # Balance taake private korlam. (double _ _ diye kono kichu / attribute ke private kora hoy)
 
     def deposit(self, amount):
         self.__balance += amount
@@ -37,4 +37,4 @@ print(rafsan._Bank__balance) # _Bank__balance ta print(dir(rafsan)) theke peyech
 # balance ta ami outside theke access korte parchi
 # kintu ami chaina baire theke kew balance taake access koruk
 # tar jonno amra bank class er modde init er moddhe likhe dite pari
-# self.__balance = initial_deposit
+# self.__balance = initial_deposit (double _ _ diye kono kichu / attribute ke private kora hoy)

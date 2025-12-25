@@ -15,5 +15,5 @@ class DerivedClass(BaseClass): # DerivedClass BaseClass ke inherite korbe
 
 3. Multiple Inheritance: Student (Family, School, Sports)
 
-4. Hybrid (multi-level + multiple): Grandpa --> Father, Uncle, Aunty --> Child (Father, Uncle)
+4. Hybrid (multi-level + multiple): Grandpa --> Father, Uncle, Aunty --> Child(s) (Father, Uncle, Aunty theke ashe)
 """

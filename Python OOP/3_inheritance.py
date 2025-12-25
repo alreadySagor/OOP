@@ -10,12 +10,12 @@ class Gadget: # eta base class ba parent class
 
     # common functionality/method
     def run(self):
-        return f'Runnig laptop: {self.brand}'
+        return f'Runnig Device: {self.brand}'
 
 # parent/base class er biporit hocche derived class/child class
 # egulate uncommon attirbute + functionalities thake.
 
-class Laptop:
+class Laptop: # Derived class
     # common gula base class e niye gechi tai ekhane rakhlam na (comment kore rakhlam)
     def __init__(self, memory, ssd): # brand, price, color
         # self.brand = brand
@@ -29,7 +29,7 @@ class Laptop:
     def coding(self):
         return f'Learning python and practicing'
     
-class Phone:
+class Phone: # Derived class
     def __init__(self, dual_sim): # brand, price, color,
         # self.brand = brand
         # self.price = price
@@ -45,7 +45,7 @@ class Phone:
     def __repr__(self):
         return f'phone: {self.dual_sim}'
 
-class Camera:
+class Camera: # Derived class
     def __init__(self, pixel): # brand, price, color,
         # self.brand = brand
         # self.price = price
@@ -58,7 +58,7 @@ class Camera:
     def change_lens(self):
         pass
 
-# f = Phone(True)
+# f = Phone(True) # mone kori dual_sim = True
 # print(f.phone_call(4343, 'ur3'))
 # print(Phone(True))
 # print(f)
