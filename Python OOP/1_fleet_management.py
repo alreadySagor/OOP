@@ -10,7 +10,7 @@ class Company:
         self.fare = [] # vara
 
 class Driver:
-    def __init__(self, name, lisence, age):
+    def __init__(self, name, license, age):
         self.name = name
         self.lisence = license
         self.age = age

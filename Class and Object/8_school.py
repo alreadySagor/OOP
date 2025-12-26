@@ -52,7 +52,7 @@ class School:
     
 # alia = Student('Alia', 9, 1)
 # ranbir = Teacher('Ranbir', 'Romance', 420)
-# print(alia)
+# print(alia)_
 # print(ranbir)
 
 phitron = School('Phitron')

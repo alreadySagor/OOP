@@ -1,5 +1,4 @@
 # base class / parent class
-
 class BaseClass:
     pass
 

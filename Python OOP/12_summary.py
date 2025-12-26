@@ -3,6 +3,7 @@ class Book:
         self.name = name
     def read(self):
         raise NotImplementedError # eitake call korle error dekhabe (jodi ei method ta child class e na thake. Ar thakle child class e ja bola ache/hobe tai dekhabe) / Base class e jei method ta thakbe sei method ta child class e must thaktei hobe.
+
 class Physics(Book):
     def __init__(self, name, lab):
         self.lab = lab
@@ -23,7 +24,7 @@ topon.read()
 
 def read(self):
         raise NotImplementedError # eitake call korle error dekhabe
-# error ta na khete chaile child class e taake implement korte hobe(Physics er moddhe korechi)
+# error ta na khete chaile child class e etaake implement korte hobe(Physics er moddhe korechi)
 
 def read(self):
         # pass # eta dile--kono kichu na likheleu somossha nai

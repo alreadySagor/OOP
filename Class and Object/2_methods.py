@@ -5,7 +5,7 @@ class Phone:
     features = ['camera', 'speaker', 'hammer']
 
     # selt --> bortoman object ke bojhay
-    def call(self): # eti ekti method (normally eti ekti function kintu jehetu class er vitor etake add korechi/likhechi tai ekhon eti ekti method) and class er vitore function thakar fole 1 ta extra parameter amake dite hobe seta self
+    def call(self): # eti ekti method (normally eti ekti function kintu jehetu class er vitor etake add korechi/likhechi tai ekhon eti ekti method) and class er vitore function thakar fole 1 ta extra parameter amake dite hobe seta self (as usually sobai self use kore)
         print('calling one person')
     
     def send_sms(self, phone, sms):
