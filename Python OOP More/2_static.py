@@ -1,4 +1,4 @@
-# static method @staticmethod (ek kaaj hocche instance se nibe na
+# static method @staticmethod (er kaaj hocche instance se nibe na
 # na niye normal ekta function outside e lekha jerokom ekhane (class er moddhe) lekha
 # ekirokom. Ekatke class er upor sorasori use korte parbo) 
 
