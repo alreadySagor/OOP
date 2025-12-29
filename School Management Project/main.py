@@ -31,6 +31,10 @@ abul = Teacher('Abul Khan')
 babul = Teacher('Babul Khan')
 kabul = Teacher('Kbul Khan')
 
+school.add_teacher('bangla', abul)
+school.add_teacher('physics', babul)
+school.add_teacher('chemistry', kabul)
+
 # Adding Subjects
 bangla = Subject('Bangla', abul)
 physics = Subject('Physics', babul)
