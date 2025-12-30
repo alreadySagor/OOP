@@ -8,17 +8,17 @@ class School:
         self.classrooms = {}
 
     def add_classroom(self, classroom): # classroom er object ke parameter hisebe nilam
-        self.classrooms[classroom.name] = classroom
+        self.classrooms[classroom.name] = classroom # classroom er naam ke key baniye dictionary te rakhe.
 
     def add_teacher(self, subject, teacher):
-        self.teachers[subject] = teacher
+        self.teachers[subject] = teacher # kono ekti subject ke kon teacher porabe seta set korlam.
     
     def student_admission(self, student):
-        class_name = student.classroom.name
-        self.classrooms[class_name].add_student(student)
+        class_name = student.classroom.name # student kon classroom er ta ber kora holo.
+        self.classrooms[class_name].add_student(student) # Sei classroom object theke add_student() call kora holo.
 
     @staticmethod
-    def calculate_grade(marks):
+    def calculate_grade(marks): # Example --> School.calculate_grade(85) → 'A+'
         if marks >= 80 and marks <= 100:
             return 'A+'
         elif marks >= 70 and marks <= 79:
@@ -37,7 +37,7 @@ class School:
             return f'Envalid Marks!!'
     
     @staticmethod
-    def grade_to_value(grade):
+    def grade_to_value(grade): # Example --> 'A+' → 5.00
         grade_map = {
             'A+' : 5.00,
             'A' : 4.00,
@@ -50,7 +50,7 @@ class School:
         return grade_map[grade]
     
     @staticmethod
-    def value_to_grade(value):
+    def value_to_grade(value): # GPA value → Final grade
         if value == 5.00:
             return 'A+'
         elif value >= 4.00 and value < 5.00:
@@ -68,7 +68,7 @@ class School:
         else:
             return f'Invalid Input!!'
         
-    def __repr__(self):
+    def __repr__(self): # print(school) dile ei method call hoy.
         # All classrooms
         for key in self.classrooms.keys():
             print(key)
@@ -76,9 +76,9 @@ class School:
         print('All Students')
         result = ''
         for key,  value in self.classrooms.items(): # prottekta classroom e gelam
-            result += f'---{key.upper()} Classroom Students\n' # class room er name show korbe
+            result += f'---{key.upper()} Classroom Students\n' # ekekta class room er name show korbe
             for student in value.students:
-                result += f'{student.name}\n' # classroom er under e jotogulo student ache tader name show korbe
+                result += f'{student.name}\n' # ekekta classroom er under e jotogulo student ache tader name show korbe
         print(result)
 
         # All subjects
@@ -115,14 +115,14 @@ class Classroom:
         self.subjects = []
 
     def add_student(self, student): # student object ashbe
-        roll_no = f'{self.name} <-> (len{self.students} + 1)'
+        roll_no = f'{self.name} <-> len(self.students) + 1'
         student.id = roll_no
         self.students.append(student)
     
     def add_subject(self, subject):
         self.subjects.append(subject)
     
-    def take_semister_final_exam(self):
+    def take_semister_final_exam(self): # proti ta subject nije nije exam nibe.
         for subject in self.subjects:
             subject.exam(self.students)
         
@@ -140,8 +140,8 @@ class Subject:
     def exam(self, students): # student = student er list
         for stdnt in students:
             mark = self.teacher.evaluate_exam()
-            stdnt.marks[self.name] = mark
-            stdnt.subject_grade[self.name] = School.calculate_grade(mark)
+            stdnt.marks[self.name] = mark # student.marks dict e save hoy
+            stdnt.subject_grade[self.name] = School.calculate_grade(mark) # grade hiseb kore save hoy
 
 class Person:
     def __init__(self, name):
@@ -176,7 +176,7 @@ class Student(Person):
             self.grade = School.value_to_grade(gpa)
         return f'{self.name} Final Grade : {self.grade} with GPA = {gpa}'
     
-    @property
+    @property # example of encapsulation
     def id(self):
         return self.__id
     @id.setter
@@ -237,3 +237,13 @@ eight.take_semister_final_exam()
 nine.take_semister_final_exam()
 ten.take_semister_final_exam()
 print(school)
+
+"""
+Architecture of this code...
+
+School
+ ├── Classroom
+ │    ├── Student
+ │    └── Subject ── Teacher
+
+"""
