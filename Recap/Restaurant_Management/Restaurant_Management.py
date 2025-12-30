@@ -1,3 +1,43 @@
+"""
+Docstring for Restaurant_Management
+
+check line between 82 to 87 (maybe 85)
+self.items.items() er mane ki?
+
+... self.items --> Order class e chilo
+    (self.items = {}, mane items holo ekta dictionary.
+    Format : {
+                FoodItem : Quantity
+              }
+    example : {
+                burger_obj : 2,
+                pizza_obj : 1
+               }
+    )
+    ekhon : .items() ki kore?
+    ... Eta dictionary method.
+    ... Eta Key-value pair return kore.
+    
+    folafol : dict_items([
+        (burger_obj, 2),
+        (pizza_obj, 1)
+    ])
+
+Tahole ami bolte pari...
+..> self.items মানে Order ক্লাসের items নামের dictionary।
+আর .items() সেই dictionary এর ভিতরে থাকা সব key-value pair (key, value) আকারে return করে।
+
+ba..
+...> self.items.items() Order ক্লাসের items dictionary থেকে প্রতিটা element কে (key, value) tuple আকারে রিটার্ন করে।
+
+ba..
+...> Order ক্লাসের cart এ যা যা আছে,
+.items() সেগুলাকে (item, quantity) বানিয়ে দেয়।
+
+ba..
+...> self.items.items() dictionary থেকে সব key-value pair এনে দেয়।
+"""
+
 from abc import ABC
 
 class Restaurant:
@@ -24,7 +64,7 @@ class FoodItem:
 
 class Menu:
     def __init__(self):
-        self.items = []
+        self.items = [] # Sob food Item ekhane thakbe..
     
     def add_item(self, item):
         self.items.append(item) # item er object ashbe setake nibo/nilam
@@ -32,8 +72,8 @@ class Menu:
     def find_item(self, item_name):
         for item in self.items:
             if item.name.lower() == item_name.lower():
-                return item
-        return None
+                return item # khuje pele item jabe..
+        return None # Na khuje pele None jabe..
 
     def remove_item(self, item_name):
         item = self.find_item(item_name)
@@ -59,7 +99,7 @@ class Menu:
 
 class Order:
     def __init__(self):
-        self.items = {}
+        self.items = {} # Customer er cart {FoodItem : quantity}
 
     def add_item(self, item): # item er object ashbe
         if item in self.items:
@@ -73,10 +113,11 @@ class Order:
     
     @property
     def total_price(self):
-        return sum(item.price * quantity for item, quantity in self.items.items())
+        return sum(item.price * quantity for item, quantity in self.items.items()) # ei line ta eita mean kore ("total = 0" "for item, quantity in self.items.items():" "total += item.price * quantity" "return total")
     
     def clear(self):
-        self.items = {}
+        self.items = {} # cart khali kore
+
 
 
 class User(ABC):
@@ -89,7 +130,7 @@ class User(ABC):
 class Customer(User):
     def __init__(self, name, phone, email, address):
         super().__init__(name, phone, email, address)
-        self.cart = Order() # order class er object
+        self.cart = Order() # order class er object # Prottek customer er nijossho cart
 
     def view_menu(self, restaurant):
         restaurant.menu.show_menu()
@@ -102,7 +143,7 @@ class Customer(User):
                 print('Item Quantity Exceeded !!')
                 print('------------------------------------')
             else:
-                item.quantity = quantity
+                item.quantity -= quantity
                 self.cart.add_item(item)
                 print('------------------------------------------')
                 print('Item Added')
