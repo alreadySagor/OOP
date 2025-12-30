@@ -93,17 +93,12 @@ class School:
             for sub in value.subjects:
                 subject += f'{sub.name}\n'
         print(subject)
-
-        # All Teachers -- homework
-        # print('All Teachers')
-        # for teacher in self.teachers.values():
-        #     print(teacher.name)
-
         #---------------------------------------------------
-        print('All teachers')
-        for classroom in self.classrooms.values():
-            for sub in classroom.subjects:
-                print(sub.teacher)
+        print('All Teachers')
+        teacher = ''
+        for key, value in self.teachers.items():
+            teacher += f'{key.upper()} : {value.name}\n'
+        print(teacher)
         #---------------------------------------------------
         print('Students Results')
         for key, value in self.classrooms.items():
