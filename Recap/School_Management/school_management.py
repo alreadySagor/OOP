@@ -87,7 +87,7 @@ class School:
             subject += f'---{key.upper()} Classroom Subjects\n'
             for sub in value.subjects:
                 subject += f'{sub.name}\n'
-        print(subject)
+        print(subject) 
 
         #------------------------------------------------
         print('All Teachers')
@@ -247,3 +247,5 @@ School
  │    └── Subject ── Teacher
 
 """
+
+# comment
